@@ -1,21 +1,20 @@
-const push = document.querySelector('[data-push]')
-const vibrate = document.querySelector('[data-vibrate]')
+const notificationBtn = document.querySelector('[data-push]')
+const vibrateBtn = document.querySelector('[data-vibrate]')
 const help = document.querySelector('[data-help]')
 
-push.addEventListener('click', askForNotificationPermission)
-vibrate.addEventListener('click', askForVibrationPermission)
+notificationBtn.addEventListener('click', pushNotification)
+vibrateBtn.addEventListener('click', vibrate)
 
-async function askForNotificationPermission(){
+async function pushNotification(){
     let permission = await Notification.requestPermission()
     if(permission!='granted') showHowAppWorks()
     new Notification("Hello, From PWA",{
         body: 'This app allows to push notification and vibrate your mobile device, You are welcome',
-        tag: 'PWA-Not-Vib'
     })
 }
 
-function askForVibrationPermission(){
-
+function vibrate(){
+    navigator.vibrate(2000)
 }
 
 function showHowAppWorks(){
