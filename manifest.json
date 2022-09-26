@@ -1,0 +1,24 @@
+{
+    "name": "Faraji PWA",
+    "short_name": "Fari PWA",
+    "description": "This app allows to push notification and vibrate your mobile device",
+    "start_url": ".",
+    "background_color": "#e7e7e7",
+    "theme_color": "#ee8003",
+    "display": "standalone",
+    "icons": 
+        [{
+            "src": "icons/myLogo.png",
+            "sizes": "427x427",
+            "type": "image/png"
+        },{
+            "src": "icons/myLogo512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },{
+            "src": "icons/myLogo_maskable.png",
+            "sizes": "427x427",
+            "type": "image/png",
+            "purpose": "maskable"
+        }]
+}
