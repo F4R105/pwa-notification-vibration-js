@@ -1,6 +1,8 @@
 const notificationBtn = document.querySelector('[data-push]')
 const vibrateBtn = document.querySelector('[data-vibrate]')
 const help = document.querySelector('[data-help]')
+const installBtn = document.querySelector('[data-install]')
+let installPopUp
 
 if("serviceWorker" in navigator){
     navigator.serviceWorker.register('service_worker.js')
@@ -30,3 +32,8 @@ function informUser(message){
     help.style.opacity = 1
     setTimeout(()=>help.style.opacity = 0, 3000)
 }
+
+window.addEventListener('beforeinstallprompt',e=>installPopUp = e)
+installBtn.addEventListener('click',()=>{
+    installPopUp.prompt()
+})

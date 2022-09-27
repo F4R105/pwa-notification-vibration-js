@@ -68,6 +68,13 @@ button#vibrate:hover{
     transition: opacity 0.3s ease-in-out;
 }
 
+#installBtn{
+    color: #ee8003;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
+}
+
 footer{
     background-color: black;
     color: rgb(88, 88, 88);
