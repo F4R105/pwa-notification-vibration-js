@@ -34,6 +34,9 @@ function informUser(message){
 }
 
 window.addEventListener('beforeinstallprompt',e=>installPopUp = e)
-installBtn.addEventListener('click',()=>{
+installBtn.addEventListener('click',promptInstallation)
+installBtn.addEventListener('touchstart',promptInstallation)
+
+function promptInstallation(e){
     installPopUp.prompt()
-})
+}
